@@ -9,9 +9,6 @@
 html {
   scroll-behavior: smooth;
 }
-html section {
-  width: 80% !important;
-}
 html body {
   display: flex;
   justify-content: center;
@@ -19,7 +16,7 @@ html body {
   background-color: #1f2937;
   margin: 0;
 }
-html main {
+html body main {
   width: 100%;
   max-width: 1000px;
   margin: 5% auto 0 auto;
@@ -29,16 +26,16 @@ html main {
   align-items: center;
   flex-direction: column;
 }
-html .section {
-  width: 80% !important;
+html body main section {
+  width: 70% !important;
 }
-html .section .content {
+html body main .section .content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
 }
-html .section .content .sobre-mi {
+html body main .section .content .sobre-mi {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -46,51 +43,69 @@ html .section .content .sobre-mi {
   margin-top: 2vh;
   margin-left: 20px;
 }
-html .section .content .sobre-mi h1 {
+html body main .section .content .sobre-mi h1 {
   color: rgba(255, 255, 255, 0.8705882353);
   font-size: 40px;
   font-weight: 700;
 }
-html .section .content .sobre-mi p {
+html body main .section .content .sobre-mi p {
   color: #ced6e2;
   font-size: 18px;
   margin-bottom: 1vh;
 }
-html .section .content .sobre-mi button {
+html body main .section .content .sobre-mi .botones {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 10px;
+}
+html body main .section .content .sobre-mi .botones button {
   border: none;
   outline: none;
   border-radius: 10px;
   font-size: 1rem;
   color: rgb(255, 255, 255);
-  padding: 6px 6px;
+  padding: 4px 4px;
   cursor: pointer;
   transition: all 0.5s ease-out;
   margin-left: -15px;
 }
-html .section .content .sobre-mi button .fa-brands {
+html body main .section .content .sobre-mi .botones button .fa-brands {
   display: inline-block;
   margin: 6px;
   color: white;
   font-size: 1rem;
 }
-html .section .content .sobre-mi .btn-github {
+html body main .section .content .sobre-mi .botones button .fa-solid {
+  display: inline-block;
+  margin: 6px;
+  color: white;
+  font-size: 1rem;
+}
+html body main .section .content .sobre-mi .botones .btn-github {
   background-color: #10b981;
 }
-html .section .content .sobre-mi .btn-github:hover {
+html body main .section .content .sobre-mi .botones .btn-github:hover {
   background-color: #127255;
 }
-html .section .content .img-personal {
+html body main .section .content .sobre-mi .botones .btn-color {
+  background-color: #6666f0;
+}
+html body main .section .content .sobre-mi .botones .btn-color:hover {
+  background-color: #4141f1;
+}
+html body main .section .content .img-personal {
   width: 250px;
   height: auto;
   border-radius: 50%;
   border: 6px solid #171f2f;
 }
-html .section2 {
+html body main .section2 {
   display: flex;
   flex-direction: column;
   margin-bottom: 2%;
 }
-html .section2 h2 {
+html body main .section2 h2 {
   font-size: 32px;
   font-weight: 700;
   color: #e0e9f8;
@@ -100,13 +115,13 @@ html .section2 h2 {
   align-items: center;
   gap: 10px;
 }
-html .section2 .grid-container {
+html body main .section2 .grid-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5%;
   text-align: center;
 }
-html .section2 .grid-container .grid-item {
+html body main .section2 .grid-container .grid-item {
   flex: 1 1 calc(25% - 20px);
   display: flex;
   justify-content: center;
@@ -116,24 +131,24 @@ html .section2 .grid-container .grid-item {
   height: 150px;
   animation: pulse 1.5s infinite ease-in-out;
 }
-html .section2 .grid-container .grid-item .grid-content {
+html body main .section2 .grid-container .grid-item .grid-content {
   width: 100%;
   max-width: 100%;
   transition: all 0.2s ease-in-out;
 }
-html .section2 .grid-container .grid-item .grid-content img {
+html body main .section2 .grid-container .grid-item .grid-content img {
   max-width: 60px;
   height: auto;
 }
-html .section2 .grid-container .grid-item .grid-content p {
+html body main .section2 .grid-container .grid-item .grid-content p {
   margin-top: 6%;
   color: #fff;
   font-size: 15px;
 }
-html .section2 .grid-container .grid-item .grid-content .texto {
+html body main .section2 .grid-container .grid-item .grid-content .texto {
   font-size: 13px;
 }
-html .section3 h2 {
+html body main .section3 h2 {
   font-size: 32px;
   font-weight: 700;
   color: #e0e9f8;
@@ -143,7 +158,7 @@ html .section3 h2 {
   align-items: center;
   gap: 10px;
 }
-html .section3 .contenedor-grid {
+html body main .section3 .contenedor-grid {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -153,7 +168,7 @@ html .section3 .contenedor-grid {
   border-radius: 10px;
   margin-bottom: 10%;
 }
-html .section3 .contenedor-grid .proyecto-item {
+html body main .section3 .contenedor-grid .proyecto-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,31 +180,31 @@ html .section3 .contenedor-grid .proyecto-item {
   border-radius: 15px;
   transition: all 0.5s ease-out;
 }
-html .section3 .contenedor-grid .proyecto-item img {
+html body main .section3 .contenedor-grid .proyecto-item img {
   width: 100%;
   height: auto;
   max-height: 500px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-html .section3 .contenedor-grid .proyecto-item:hover {
+html body main .section3 .contenedor-grid .proyecto-item:hover {
   transform: scale(1.1);
   background-color: rgba(32, 32, 32, 0.308);
 }
-html .section3 .contenedor-grid .proyecto-item .proyecto-info {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info {
   color: white;
   font-size: 16px;
   font-weight: 100;
   margin-top: 2%;
 }
-html .section3 .contenedor-grid .proyecto-item .proyecto-info .proyecto-titulo {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .proyecto-titulo {
   font-size: 20px;
 }
-html .section3 .contenedor-grid .proyecto-item .proyecto-info p {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info p {
   margin-top: 6px;
   font-size: 13px;
 }
-html .section3 .contenedor-grid .proyecto-item .boton-animado {
+html body main .section3 .contenedor-grid .proyecto-item .boton-animado {
   cursor: pointer;
   margin-top: 5%;
   background-color: #6666f0;
@@ -200,16 +215,16 @@ html .section3 .contenedor-grid .proyecto-item .boton-animado {
   padding: 4px 6px;
   transition: all 0.5s ease-out;
 }
-html .section3 .contenedor-grid .proyecto-item .boton-animado:hover {
+html body main .section3 .contenedor-grid .proyecto-item .boton-animado:hover {
   background-color: #4141f1;
 }
-html .section3 .contenedor-grid .proyecto-item .fa-brands,
-html .section3 .contenedor-grid .proyecto-item .fa-solid {
+html body main .section3 .contenedor-grid .proyecto-item .fa-brands,
+html body main .section3 .contenedor-grid .proyecto-item .fa-solid {
   display: inline-block;
   font-size: 1rem;
   margin: 0 5px;
 }
-html .section3 .contenedor-grid .proyecto-item .boton-animado2 {
+html body main .section3 .contenedor-grid .proyecto-item .boton-animado2 {
   cursor: pointer;
   margin-top: 5%;
   background-color: #ffffff;
@@ -221,16 +236,16 @@ html .section3 .contenedor-grid .proyecto-item .boton-animado2 {
   transition: all 0.5s ease-out;
   margin-right: 5px;
 }
-html .section3 .contenedor-grid .proyecto-item .boton-animado2:hover {
+html body main .section3 .contenedor-grid .proyecto-item .boton-animado2:hover {
   background-color: #cacaca;
 }
-html .section3 .contenedor-grid .proyecto-item .boton-animado,
-html .section3 .contenedor-grid .proyecto-item .boton-animado2 {
+html body main .section3 .contenedor-grid .proyecto-item .boton-animado,
+html body main .section3 .contenedor-grid .proyecto-item .boton-animado2 {
   margin-right: 10px;
   display: inline-flex;
   align-items: center;
 }
-html .section4 h2 {
+html body main .section4 h2 {
   font-size: 32px;
   font-weight: 700;
   color: #e0e9f8;
@@ -239,7 +254,7 @@ html .section4 h2 {
   align-items: center;
   gap: 10px;
 }
-html .section4 form {
+html body main .section4 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -251,23 +266,23 @@ html .section4 form {
   text-align: start;
   margin-left: 3%;
 }
-html .section4 form .form-group {
+html body main .section4 form .form-group {
   display: flex;
   flex-direction: column;
 }
-html .section4 form .form-group label {
+html body main .section4 form .form-group label {
   color: #e0e9f8;
   margin-bottom: 4px;
 }
-html .section4 form .form-group input,
-html .section4 form .form-group textarea {
+html body main .section4 form .form-group input,
+html body main .section4 form .form-group textarea {
   padding: 5px;
   border-radius: 5px;
   background-color: #1f2937;
   color: white;
   border: none;
 }
-html .section4 form .enviar {
+html body main .section4 form .enviar {
   cursor: pointer;
   background-color: #6d6dff;
   border: none;
@@ -277,7 +292,7 @@ html .section4 form .enviar {
   font-size: 16px;
   transition: 0.5s ease-in-out;
 }
-html .section4 form .enviar:hover {
+html body main .section4 form .enviar:hover {
   background-color: #5353ff;
 }
 @media (max-width: 768px) {
