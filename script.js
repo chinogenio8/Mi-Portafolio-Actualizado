@@ -1,9 +1,8 @@
-const menuBtn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu');
+document.addEventListener('DOMContentLoaded', function() {
+  const menuHamburguesa = document.querySelector('.menu-hamburguesa');
+  const menuNav = document.querySelector('.menu-nav');
 
-menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('active');   
-
-  menu.classList.toggle('active');   
-
+  menuHamburguesa.addEventListener('click', function() {
+    menuNav.classList.toggle('open');
+  });
 });
