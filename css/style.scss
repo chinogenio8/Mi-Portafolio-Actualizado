@@ -10,57 +10,6 @@
 html {
   scroll-behavior: smooth;
 
-  .menu-hamburguesa {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    cursor: pointer;
-    color: #ffff;
-    font-size: 28px;
-  }
-
-  /* Menú lateral */
-  .menu-nav {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background-color: #1f2630;
-    transition: left 0.5s ease;
-    z-index: 999;
-    display: flex; // Añadido para centrar los elementos
-    justify-content: center; // Añadido para centrar los elementos horizontalmente
-    align-items: center; // Añadido para centrar los elementos verticalmente
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        margin: 20px 0;
-        text-align: center;
-
-        a {
-          color: #ffff;
-          text-decoration: none;
-          font-size: 18px;
-          padding: 8px;
-          transition: all 0.5s ease-out;
-          &:hover {
-            border-radius: 10px;
-            background-color: #10b981;
-          }
-        }
-      }
-    }
-
-    &.open {
-      left: 0;
-    }
-  }
   body {
     display: flex;
     justify-content: center;
@@ -68,6 +17,56 @@ html {
     background-color: #1f2937;
     margin: 0;
 
+    .menu-hamburguesa {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      cursor: pointer;
+      color: #ffff;
+      font-size: 28px;
+    }
+
+    .menu-nav {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 200px;
+      height: 100%;
+      background-color: #262e3b;
+      transition: left 0.5s ease;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin: 20px 0;
+          text-align: center;
+
+          a {
+            color: #ffff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px;
+            transition: all 0.5s ease-out;
+            &:hover {
+              border-radius: 10px;
+              background-color: #10b981;
+            }
+          }
+        }
+      }
+
+      &.open {
+        left: 0;
+      }
+    }
     main {
       width: 100%;
       max-width: 1000px;
@@ -78,6 +77,15 @@ html {
       align-items: center;
       flex-direction: column;
 
+      .titulo {
+        display: flex;
+        justify-content: start;
+        font-size: 32px;
+        font-weight: 700;
+        color: #e0e9f8;
+        margin-top: 5%;
+        gap: 10px;
+      }
       section {
         width: 70% !important ;
       }
@@ -122,7 +130,7 @@ html {
                 color: rgb(255, 255, 255);
                 padding: 6px 6px;
                 cursor: pointer;
-                transition: all 0.5s ease-out;
+                transition: all 0.5s ease-in-out;
                 margin-left: -15px;
 
                 .fa-brands {
@@ -156,7 +164,7 @@ html {
           }
 
           .img-personal {
-            width: 250px;
+            width: 200px;
             height: auto;
             border-radius: 50%;
             border: 6px solid #171f2f;
@@ -167,17 +175,6 @@ html {
         display: flex;
         flex-direction: column;
         margin-bottom: 2%;
-
-        h2 {
-          font-size: 32px;
-          font-weight: 700;
-          color: #e0e9f8;
-          margin-top: 5%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-        }
 
         .grid-container {
           display: flex;
@@ -219,17 +216,6 @@ html {
         }
       }
       .section3 {
-        h2 {
-          font-size: 32px;
-          font-weight: 700;
-          color: #e0e9f8;
-          margin-top: 5%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-        }
-
         .contenedor-grid {
           display: grid;
           justify-content: center;
@@ -250,7 +236,7 @@ html {
             padding: 3%;
             background-color: #2b3544;
             border-radius: 15px;
-            transition: all 0.5s ease-out;
+            transition: all 0.5s ease-in-out;
 
             img {
               width: 100%;
@@ -268,7 +254,6 @@ html {
             .proyecto-info {
               color: white;
               font-size: 16px;
-              font-weight: 100;
               margin-top: 2%;
 
               .proyecto-titulo {
@@ -276,84 +261,79 @@ html {
               }
 
               p {
-                margin-top: 6px;
-                font-size: 13px;
+                color: rgb(209, 209, 209);
+                font-size: 16px;
+                text-align: center;
               }
-            }
+              .lenguajes {
+                display: flex;
+                flex-direction: row;
 
-            .boton-animado {
-              cursor: pointer;
-              margin-top: 5%;
-              background-color: #6666f0;
-              border: none;
-              border-radius: 10px;
-              font-size: 1rem;
-              color: rgb(255, 255, 255);
-              padding: 4px 6px;
-              transition: all 0.5s ease-out;
-
-              &:hover {
-                background-color: #4141f1;
+                gap: 20px;
+                img {
+                  height: 30px;
+                }
               }
-            }
+              .boton-animado {
+                cursor: pointer;
+                margin-top: 5%;
+                background-color: #6666f0;
+                border: none;
+                border-radius: 10px;
+                font-size: 1rem;
+                color: rgb(255, 255, 255);
+                padding: 4px 6px;
+                transition: all 0.5s ease-in-out;
 
-            .fa-brands,
-            .fa-solid {
-              display: inline-block;
-              font-size: 1rem;
-              margin: 0 5px;
-            }
-
-            .boton-animado2 {
-              cursor: pointer;
-              margin-top: 5%;
-              background-color: #ffffff;
-              border: none;
-              border-radius: 10px;
-              font-size: 1rem;
-              color: rgb(0, 0, 0);
-              padding: 4px 6px;
-              transition: all 0.5s ease-out;
-              margin-right: 5px;
-
-              &:hover {
-                background-color: #cacaca;
+                &:hover {
+                  background-color: #4141f1;
+                }
               }
-            }
 
-            .boton-animado,
-            .boton-animado2 {
-              margin-right: 10px;
-              display: inline-flex;
-              align-items: center;
+              .fa-brands,
+              .fa-solid {
+                display: inline-block;
+                font-size: 1rem;
+                margin: 0 5px;
+              }
+
+              .boton-animado2 {
+                cursor: pointer;
+                margin-top: 5%;
+                background-color: #ffffff;
+                border: none;
+                border-radius: 10px;
+                font-size: 1rem;
+                color: rgb(0, 0, 0);
+                padding: 4px 6px;
+                transition: all 0.5s ease-in-out;
+                margin-right: 5px;
+
+                &:hover {
+                  background-color: #cacaca;
+                }
+              }
+
+              .boton-animado,
+              .boton-animado2 {
+                margin-right: 10px;
+                display: inline-flex;
+                align-items: center;
+              }
             }
           }
         }
       }
       .section4 {
-        h2 {
-          font-size: 32px;
-          font-weight: 700;
-          color: #e0e9f8;
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-        }
-
         form {
           display: flex;
           flex-direction: column;
-          gap: 15px;
+          justify-content: start;
           background-color: #2b3544;
           padding: 20px;
           border-radius: 10px;
           max-width: 800px;
           margin-top: 20px;
-          text-align: start;
-          margin-left: 3%;
-
           .form-group {
             display: flex;
             flex-direction: column;

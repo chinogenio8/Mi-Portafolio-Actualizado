@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 * {
   box-sizing: border-box;
@@ -9,9 +8,15 @@
 
 html {
   scroll-behavior: smooth;
-  /* Menú lateral */
 }
-html .menu-hamburguesa {
+html body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937;
+  margin: 0;
+}
+html body .menu-hamburguesa {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -20,48 +25,41 @@ html .menu-hamburguesa {
   color: white;
   font-size: 28px;
 }
-html .menu-nav {
+html body .menu-nav {
   position: fixed;
   top: 0;
   left: -250px;
   width: 200px;
   height: 100%;
-  background-color: #1f2630;
+  background-color: #262e3b;
   transition: left 0.5s ease;
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-html .menu-nav ul {
+html body .menu-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-html .menu-nav ul li {
+html body .menu-nav ul li {
   margin: 20px 0;
   text-align: center;
 }
-html .menu-nav ul li a {
+html body .menu-nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
   padding: 8px;
   transition: all 0.5s ease-out;
 }
-html .menu-nav ul li a:hover {
+html body .menu-nav ul li a:hover {
   border-radius: 10px;
   background-color: #10b981;
 }
-html .menu-nav.open {
+html body .menu-nav.open {
   left: 0;
-}
-html body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1f2937;
-  margin: 0;
 }
 html body main {
   width: 100%;
@@ -72,6 +70,15 @@ html body main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+html body main .titulo {
+  display: flex;
+  justify-content: start;
+  font-size: 32px;
+  font-weight: 700;
+  color: #e0e9f8;
+  margin-top: 5%;
+  gap: 10px;
 }
 html body main section {
   width: 70% !important;
@@ -114,7 +121,7 @@ html body main .section .content .sobre-mi .botones button {
   color: rgb(255, 255, 255);
   padding: 6px 6px;
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
   margin-left: -15px;
 }
 html body main .section .content .sobre-mi .botones button .fa-brands {
@@ -142,7 +149,7 @@ html body main .section .content .sobre-mi .botones .btn-color:hover {
   background-color: #4141f1;
 }
 html body main .section .content .img-personal {
-  width: 250px;
+  width: 200px;
   height: auto;
   border-radius: 50%;
   border: 6px solid #171f2f;
@@ -151,16 +158,6 @@ html body main .section2 {
   display: flex;
   flex-direction: column;
   margin-bottom: 2%;
-}
-html body main .section2 h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #e0e9f8;
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 }
 html body main .section2 .grid-container {
   display: flex;
@@ -195,16 +192,6 @@ html body main .section2 .grid-container .grid-item .grid-content p {
 html body main .section2 .grid-container .grid-item .grid-content .texto {
   font-size: 13px;
 }
-html body main .section3 h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #e0e9f8;
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 html body main .section3 .contenedor-grid {
   display: grid;
   justify-content: center;
@@ -225,7 +212,7 @@ html body main .section3 .contenedor-grid .proyecto-item {
   padding: 3%;
   background-color: #2b3544;
   border-radius: 15px;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 html body main .section3 .contenedor-grid .proyecto-item img {
   width: 100%;
@@ -241,17 +228,25 @@ html body main .section3 .contenedor-grid .proyecto-item:hover {
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info {
   color: white;
   font-size: 16px;
-  font-weight: 100;
   margin-top: 2%;
 }
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .proyecto-titulo {
   font-size: 20px;
 }
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info p {
-  margin-top: 6px;
-  font-size: 13px;
+  color: rgb(209, 209, 209);
+  font-size: 16px;
+  text-align: center;
 }
-html body main .section3 .contenedor-grid .proyecto-item .boton-animado {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .lenguajes {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .lenguajes img {
+  height: 30px;
+}
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado {
   cursor: pointer;
   margin-top: 5%;
   background-color: #6666f0;
@@ -260,18 +255,18 @@ html body main .section3 .contenedor-grid .proyecto-item .boton-animado {
   font-size: 1rem;
   color: rgb(255, 255, 255);
   padding: 4px 6px;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
-html body main .section3 .contenedor-grid .proyecto-item .boton-animado:hover {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado:hover {
   background-color: #4141f1;
 }
-html body main .section3 .contenedor-grid .proyecto-item .fa-brands,
-html body main .section3 .contenedor-grid .proyecto-item .fa-solid {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .fa-brands,
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .fa-solid {
   display: inline-block;
   font-size: 1rem;
   margin: 0 5px;
 }
-html body main .section3 .contenedor-grid .proyecto-item .boton-animado2 {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado2 {
   cursor: pointer;
   margin-top: 5%;
   background-color: #ffffff;
@@ -280,38 +275,27 @@ html body main .section3 .contenedor-grid .proyecto-item .boton-animado2 {
   font-size: 1rem;
   color: rgb(0, 0, 0);
   padding: 4px 6px;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
   margin-right: 5px;
 }
-html body main .section3 .contenedor-grid .proyecto-item .boton-animado2:hover {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado2:hover {
   background-color: #cacaca;
 }
-html body main .section3 .contenedor-grid .proyecto-item .boton-animado,
-html body main .section3 .contenedor-grid .proyecto-item .boton-animado2 {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado,
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado2 {
   margin-right: 10px;
   display: inline-flex;
   align-items: center;
 }
-html body main .section4 h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #e0e9f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 html body main .section4 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: start;
   background-color: #2b3544;
   padding: 20px;
   border-radius: 10px;
   max-width: 800px;
   margin-top: 20px;
-  text-align: start;
-  margin-left: 3%;
 }
 html body main .section4 form .form-group {
   display: flex;
