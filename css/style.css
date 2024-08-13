@@ -52,7 +52,11 @@ html body .menu-nav ul li a {
   text-decoration: none;
   font-size: 18px;
   padding: 8px;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
+}
+html body .menu-nav ul li a:hover {
+  background-color: #435064;
+  border-radius: 10px;
 }
 html body .menu-nav.open {
   left: 0;
@@ -77,21 +81,21 @@ html body main .titulo {
   gap: 10px;
 }
 html body main section {
-  width: 70% !important;
+  width: 80% !important;
 }
 html body main .section .content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: flex-start;
 }
 html body main .section .content .sobre-mi {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: left;
   text-align: left;
-  margin-top: 2vh;
-  margin-left: 20px;
+  align-items: left;
+  margin-top: 1.3vh;
+  margin-left: 25px;
 }
 html body main .section .content .sobre-mi h1 {
   color: rgba(255, 255, 255, 0.8705882353);
@@ -115,7 +119,8 @@ html body main .section .content .sobre-mi .botones button {
   border-radius: 10px;
   font-size: 1rem;
   color: rgb(255, 255, 255);
-  padding: 6px 9px;
+  padding: 5px;
+  width: 120px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   margin-left: -15px;
@@ -142,13 +147,13 @@ html body main .section .content .sobre-mi .botones .btn-github {
   background-color: #10b981;
 }
 html body main .section .content .sobre-mi .botones .btn-github:hover {
-  background-color: #127255;
+  background-color: #1b9671;
 }
 html body main .section .content .sobre-mi .botones .btn-color {
   background-color: #6666f0;
 }
 html body main .section .content .sobre-mi .botones .btn-color:hover {
-  background-color: #4141f1;
+  background-color: #4747b9;
 }
 html body main .section .content .img-personal {
   width: 200px;
@@ -194,19 +199,14 @@ html body main .section2 .grid-container .grid-item .grid-content .texto {
 html body main .section3 .contenedor-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5%;
+  grid-gap: 2%;
   margin-top: 5%;
   border-radius: 10px;
-  margin-bottom: 8%;
+  margin-bottom: 4%;
   padding: 2%;
 }
 html body main .section3 .contenedor-grid .proyecto-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
+  width: 90%;
   padding: 3%;
   background-color: #2b3544;
   border-radius: 15px;
@@ -220,7 +220,7 @@ html body main .section3 .contenedor-grid .proyecto-item img {
   margin-bottom: 10px;
 }
 html body main .section3 .contenedor-grid .proyecto-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   background-color: rgba(32, 32, 32, 0.308);
 }
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info {
@@ -281,12 +281,12 @@ html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-a
 html body main .section4 form {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   background-color: #2b3544;
   padding: 20px;
   border-radius: 10px;
   max-width: 800px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 html body main .section4 form .form-group {
   display: flex;
@@ -320,17 +320,15 @@ html body main .section4 form .enviar:hover {
 
 @media (max-width: 768px) {
   .titulo {
-    justify-content: center;
-    text-align: center;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .grid-container {
     gap: 10px;
   }
   .contenedor-grid {
     grid-template-columns: 1fr !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-items: center !important;
   }
   .content {
     flex-wrap: wrap;
@@ -364,10 +362,14 @@ html body main .section4 form .enviar:hover {
     grid-gap: 20px;
   }
 }
-@media screen and (min-width: 455px) {
+@media (max-width: 635px) {
+  .content {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 455px) {
   .botones {
-    flex-direction: row; /* Fila para pantallas de 455px en adelante */
-    justify-content: space-around;
+    flex-direction: column !important;
   }
 }
 @keyframes pulse {

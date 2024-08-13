@@ -54,7 +54,11 @@ html {
             text-decoration: none;
             font-size: 18px;
             padding: 8px;
-            transition: all 0.5s ease-out;
+            transition: all 0.3s ease-out;
+            &:hover{
+              background-color: #435064;
+              border-radius: 10px;
+            }
           }
         }
       }
@@ -72,7 +76,7 @@ html {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-
+      
       .titulo {
         display: flex;
         justify-content: start;
@@ -83,24 +87,25 @@ html {
         gap: 10px;
       }
       section {
-        width: 70% !important ;
+        width: 80% !important ;
       }
 
       .section {
         .content {
           display: flex;
           flex-direction: row;
-          justify-content: center;
+          
+          
           align-items: flex-start;
-
           .sobre-mi {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: left;
             text-align: left;
-            margin-top: 2vh;
-            margin-left: 20px;
-
+            align-items: left;
+            margin-top: 1.3vh;
+            margin-left: 25px;
+            
             h1 {
               color: #ffffffde;
               font-size: 40px;
@@ -124,7 +129,8 @@ html {
                 border-radius: 10px;
                 font-size: 1rem;
                 color: rgb(255, 255, 255);
-                padding: 6px 9px;
+                padding: 5px;
+                width: 120px;
                 cursor: pointer;
                 transition: all 0.5s ease-in-out;
                 margin-left: -15px;
@@ -152,13 +158,13 @@ html {
                 background-color: #10b981;
 
                 &:hover {
-                  background-color: #127255;
+                  background-color: #1b9671;
                 }
               }
               .btn-color {
                 background-color: #6666f0;
                 &:hover {
-                  background-color: #4141f1;
+                  background-color: #4747b9;
                 }
               }
             }
@@ -216,21 +222,15 @@ html {
       .section3 {
         .contenedor-grid {
           display: grid;
-
           grid-template-columns: repeat(2, 1fr);
-          grid-gap: 5%;
+          grid-gap: 2%;
           margin-top: 5%;
           border-radius: 10px;
-          margin-bottom: 8%;
+          margin-bottom: 4%;
           padding: 2%;
 
           .proyecto-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            text-align: center;
+            width: 90%;
             padding: 3%;
             background-color: #2b3544;
             border-radius: 15px;
@@ -245,7 +245,7 @@ html {
             }
 
             &:hover {
-              transform: scale(1.1);
+              transform: scale(1.05);
               background-color: rgba(32, 32, 32, 0.308);
             }
 
@@ -315,15 +315,16 @@ html {
         }
       }
       .section4 {
+        
         form {
           display: flex;
           flex-direction: column;
-          justify-content: start;
+          justify-content: center;
           background-color: #2b3544;
           padding: 20px;
           border-radius: 10px;
           max-width: 800px;
-          margin-top: 20px;
+          margin-top: 40px;
           .form-group {
             display: flex;
             flex-direction: column;
@@ -363,18 +364,16 @@ html {
   }
 }
 @media (max-width: 768px) {
-  .titulo {
-    justify-content: center;
-    text-align: center;
+  .titulo{
+    align-items: center !important;
+    justify-content: center !important;
   }
   .grid-container {
     gap: 10px;
   }
   .contenedor-grid {
     grid-template-columns: 1fr !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-items: center !important;
   }
 
   .content {
@@ -402,7 +401,7 @@ html {
   .grid-container {
     gap: 10px;
   }
-
+  
   .section3 {
     margin-bottom: 10%;
   }
@@ -418,12 +417,21 @@ html {
     grid-gap: 20px;
   }
 }
-@media screen and (min-width: 455px) {
-  .botones {
-    flex-direction: row; /* Fila para pantallas de 455px en adelante */
-    justify-content: space-around;
+
+@media (max-width: 635px){
+  .content{
+    justify-content: center;
+    
   }
 }
+@media screen and (max-width: 455px) {
+  .botones {
+    flex-direction: column !important;   
+    
+  }
+  
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
