@@ -309,10 +309,11 @@ html {
                                 transition: all 0.5s ease-in-out;
                                 display: inline-flex;
                                 align-items: center;
-
+                                color: black;
+                                background-color: white;
 
                                 &:hover {
-                                    background-color: #cacaca;
+                                    background-color: #afafaf;
                                 }
 
                             }

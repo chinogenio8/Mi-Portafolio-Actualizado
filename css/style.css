@@ -264,9 +264,11 @@ html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-a
   transition: all 0.5s ease-in-out;
   display: inline-flex;
   align-items: center;
+  color: black;
+  background-color: white;
 }
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado2:hover {
-  background-color: #cacaca;
+  background-color: #afafaf;
 }
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .fa-brands,
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .fa-solid {
