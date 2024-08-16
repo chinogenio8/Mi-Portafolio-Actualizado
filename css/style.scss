@@ -184,22 +184,15 @@ html {
             }
 
             .section2 {
-                display: flex;
-                flex-direction: column;
-                padding: 2%;
-
-                h2 {
-                    margin-left: -23px;
-                }
-
                 .grid-container {
-                    display: flex;
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-column-gap: 20px;
+                    grid-row-gap: 20px;
                     margin-top: 5%;
                     width: 100%;
-                    text-align: center;
-                    gap: 10px;
-                    justify-content: center;
+                    gap: 15px;
 
                     .grid-item {
                         flex: 1 1 calc(25% - 20px);
@@ -218,8 +211,8 @@ html {
                             transition: all 0.2s ease-in-out;
 
                             img {
-                                max-width: 60px;
-                                height: 60px;
+                                max-width: 70px;
+                                height: 70px;
                             }
 
                             p {
@@ -231,8 +224,7 @@ html {
                             .texto {
                                 display: flex;
                                 flex-direction: column;
-                                align-items: center;
-                                text-align: center;
+
                                 font-size: 13px;
                             }
                         }
@@ -241,6 +233,10 @@ html {
             }
 
             .section3 {
+                h2 {
+                    margin-bottom: 10px;
+                }
+
                 .contenedor-grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -274,7 +270,6 @@ html {
                             margin-top: 2%;
                             padding: 10px;
                             height: auto;
-
 
                             .proyecto-titulo {
                                 font-size: 20px;
@@ -334,6 +329,10 @@ html {
             }
 
             .section4 {
+                h2 {
+                    margin-top: 6%;
+                }
+
                 form {
                     display: flex;
                     flex-direction: column;
@@ -342,7 +341,7 @@ html {
                     padding: 20px;
                     border-radius: 10px;
                     max-width: 1000px;
-                    margin-top: 40px;
+
 
                     .form-group {
                         display: flex;
@@ -426,6 +425,13 @@ html {
 @media (max-width: 480px) {
     .section2 .grid-item {
         flex: 1 1 100%;
+    }
+
+    .section2 {
+        img {
+            width: 50px;
+            height: 50px;
+        }
     }
 }
 
