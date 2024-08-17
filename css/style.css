@@ -78,7 +78,7 @@ html body main .titulo {
   font-weight: 700;
   color: #e0e9f8;
   margin-top: 5%;
-  gap: 15px;
+  gap: 10px;
 }
 html body main section {
   width: 80% !important;
@@ -113,11 +113,12 @@ html body main .section .content .sobre-mi .botones {
   gap: 10px;
 }
 html body main .section .content .sobre-mi .botones button {
-  border: none;
+  border: 1px solid rgb(128, 128, 128);
   outline: none;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 1rem;
-  color: rgb(255, 255, 255);
+  color: white;
+  align-items: center;
   padding: 5px;
   width: 120px;
   cursor: pointer;
@@ -131,23 +132,11 @@ html body main .section .content .sobre-mi .botones button .fa-solid {
   color: white;
   font-size: 1rem;
 }
-html body main .section .content .sobre-mi .botones .btn-instagram {
-  background-color: #ff619d;
+html body main .section .content .sobre-mi .botones .btn-redes {
+  background-color: #293649;
 }
-html body main .section .content .sobre-mi .botones .btn-instagram:hover {
-  background-color: #c74476;
-}
-html body main .section .content .sobre-mi .botones .btn-github {
-  background-color: #10b981;
-}
-html body main .section .content .sobre-mi .botones .btn-github:hover {
-  background-color: #1b9671;
-}
-html body main .section .content .sobre-mi .botones .btn-color {
-  background-color: #6666f0;
-}
-html body main .section .content .sobre-mi .botones .btn-color:hover {
-  background-color: #4747b9;
+html body main .section .content .sobre-mi .botones .btn-redes:hover {
+  border: none;
 }
 html body main .section .content .img-personal {
   width: 200px;
@@ -158,37 +147,45 @@ html body main .section .content .img-personal {
 html body main .section2 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
   margin-top: 5%;
-  width: 100%;
-  gap: 15px;
 }
 html body main .section2 .grid-container .grid-item {
-  flex: 1 1 calc(25% - 20px);
-  padding-top: 20px;
-  max-width: 200px;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #293649;
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+html body main .section2 .grid-container .grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+html body main .section2 .grid-container .grid-item .grid-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  animation: pulse 1.5s infinite ease-in-out;
-}
-html body main .section2 .grid-container .grid-item .grid-content {
-  width: 100%;
-  max-width: 100%;
-  transition: all 0.2s ease-in-out;
 }
 html body main .section2 .grid-container .grid-item .grid-content img {
   max-width: 70px;
   height: 70px;
 }
-html body main .section2 .grid-container .grid-item .grid-content p {
-  margin-top: 6%;
+html body main .section2 .grid-container .grid-item .grid-content .language-name {
+  margin-top: 10px;
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
+}
+html body main .section2 .grid-container .grid-item .grid-content .level {
+  margin-top: 5px;
+  color: #ddd;
+  font-size: 14px;
 }
 html body main .section2 .grid-container .grid-item .grid-content .texto {
   display: flex;
@@ -202,14 +199,14 @@ html body main .section3 .contenedor-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
   padding: 5px;
 }
 html body main .section3 .contenedor-grid .proyecto-item {
   border-radius: 10px;
-  background-color: #2b3544;
-  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: auto;
 }
 html body main .section3 .contenedor-grid .proyecto-item img {
   width: 100%;
@@ -217,10 +214,6 @@ html body main .section3 .contenedor-grid .proyecto-item img {
   max-height: 500px;
   border-radius: 10px;
   margin-bottom: 10px;
-}
-html body main .section3 .contenedor-grid .proyecto-item:hover {
-  transform: scale(1.05);
-  background-color: rgba(32, 32, 32, 0.308);
 }
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info {
   text-align: left;
@@ -237,44 +230,34 @@ html body main .section3 .contenedor-grid .proyecto-item .proyecto-info p {
   color: rgb(209, 209, 209);
   font-size: 16px;
 }
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado {
-  cursor: pointer;
-  margin-top: 5%;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  padding: 4px 6px;
-  transition: all 0.5s ease-in-out;
-  display: inline-flex;
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  background-color: #6666f0;
+}
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado {
+  cursor: pointer;
+  margin: auto;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 5px;
+  transition: all 0.3s ease-out;
+  align-items: center;
+  background-color: #293649;
   color: white;
-  margin-right: 12px;
+  border: 1px solid rgb(128, 128, 128);
+  margin-right: 10px;
+  width: 110px;
 }
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado:hover {
-  background-color: #4141f1;
-}
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado2 {
-  cursor: pointer;
-  margin-top: 5%;
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado:hover {
   border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  padding: 4px 6px;
-  transition: all 0.5s ease-in-out;
-  display: inline-flex;
-  align-items: center;
-  color: black;
-  background-color: white;
 }
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .boton-animado2:hover {
-  background-color: #afafaf;
-}
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .fa-brands,
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .fa-solid {
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .fa-brands,
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .fa-solid {
   display: inline-block;
   font-size: 1rem;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 html body main .section4 h2 {
   margin-top: 6%;
@@ -353,13 +336,14 @@ html body main .section4 form .enviar:hover {
     flex: 1 1 100%;
   }
   .section2 img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 }
 @media (max-width: 680px) {
   .grid-container {
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    /* 2 columnas cuando la pantalla es menor a 680px */
   }
   .section3 {
     margin-bottom: 5%;
@@ -385,14 +369,9 @@ html body main .section4 form .enviar:hover {
     align-items: flex-start !important;
   }
 }
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */
