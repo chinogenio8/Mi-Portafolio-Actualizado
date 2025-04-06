@@ -110,40 +110,348 @@ html body main .section .content .sobre-mi .botones {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  margin-top: 10px;
 }
+
+html body main .section .content .sobre-mi .botones a {
+  text-decoration: none;
+}
+
 html body main .section .content .sobre-mi .botones button {
-  border: 1px solid rgb(128, 128, 128);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   outline: none;
   border-radius: 20px;
-  font-size: 1rem;
-  color: white;
-  align-items: center;
-  padding: 5px;
-  width: 120px;
+  font-size: 0.95rem;
+  color: #e0e9f8;
+  background-color: #293649;
+  padding: 8px 16px;
+  width: auto;
+  min-width: 120px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  margin-left: -15px;
+  transition: all 0.3s ease;
 }
+
 html body main .section .content .sobre-mi .botones button .fa-brands,
 html body main .section .content .sobre-mi .botones button .fa-solid {
-  display: inline-block;
-  margin: 6px;
-  color: white;
   font-size: 1rem;
+  transition: transform 0.3s ease;
 }
-html body main .section .content .sobre-mi .botones .btn-redes {
-  background-color: #293649;
+
+html body main .section .content .sobre-mi .botones button:hover {
+  background-color: #364761;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-html body main .section .content .sobre-mi .botones .btn-redes:hover {
-  border: none;
+
+html body main .section .content .sobre-mi .botones button:hover .fa-brands,
+html body main .section .content .sobre-mi .botones button:hover .fa-solid {
+  transform: scale(1.1);
+}
+
+html body main .section .content .sobre-mi .botones button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 html body main .section .content .img-personal {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
   width: 200px;
   height: auto;
   border-radius: 50%;
-  border: 6px solid #171f2f;
+  border: 4px solid #171f2f;
 }
+html body main .section .content .img-personal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección Sobre mí - Diseño mejorado */
+html body main .section .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.img-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img-personal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3b82f6;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: all 0.4s ease;
+  background-color: #1f2937;
+}
+
+.img-personal:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  border-color: #60a5fa;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sobre-mi {
+  flex: 1;
+}
+
+.titulo-personal {
+  margin-bottom: 1.5rem;
+}
+
+.titulo-personal h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e0e9f8;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #e0e9f8, #60a5fa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #a0aec0;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.sobre-mi p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+.botones {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-link:hover {
+  transform: translateY(-3px);
+}
+
+.btn-redes {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #293649;
+  color: #e0e9f8;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-redes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.7s ease;
+  z-index: -1;
+}
+
+.btn-redes:hover::before {
+  left: 100%;
+}
+
+.btn-redes i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-redes:hover {
+  background-color: #364761;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-redes:hover i {
+  transform: scale(1.2);
+}
+
+.btn-redes:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Aplicando el mismo efecto hover a todos los botones */
+.boton-animado {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #293649;
+  color: #e0e9f8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.boton-animado::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.7s ease;
+  z-index: -1;
+}
+
+.boton-animado:hover::before {
+  left: 100%;
+}
+
+.boton-animado i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.boton-animado:hover {
+  background-color: #364761;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-animado:hover i {
+  transform: scale(1.1);
+}
+
+.boton-animado:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones para la sección de habilidades */
+html body main .section2 .grid-container .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #293649;
+  padding: 20px;
+  border-radius: 8px;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+html body main .section2 .grid-container .grid-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html body main .section2 .grid-container .grid-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #364761;
+}
+
+html body main .section2 .grid-container .grid-item .grid-content img {
+  max-width: 70px;
+  height: 70px;
+  transition: transform 0.5s ease;
+}
+
+html body main .section2 .grid-container .grid-item:hover .grid-content img {
+  transform: rotate(10deg) scale(1.1);
+}
+
 html body main .section2 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -244,30 +552,52 @@ html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 15px;
+  margin-top: 15px;
 }
+
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 a {
+  text-decoration: none;
+}
+
 html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado {
-  cursor: pointer;
-  margin: auto;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  padding: 5px;
-  transition: all 0.3s ease-out;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  color: #e0e9f8;
   background-color: #293649;
-  color: white;
-  border: 1px solid rgb(128, 128, 128);
-  margin-right: 10px;
-  width: 110px;
+  padding: 8px 16px;
+  width: auto;
+  min-width: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado:hover {
-  border: none;
-}
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .fa-brands,
-html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .fa-solid {
-  display: inline-block;
+
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado .fa-brands,
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado .fa-solid {
   font-size: 1rem;
-  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado:hover {
+  background-color: #364761;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado:hover .fa-brands,
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado:hover .fa-solid {
+  transform: scale(1.1);
+}
+
+html body main .section3 .contenedor-grid .proyecto-item .proyecto-info .botones2 .boton-animado:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 html body main .section4 h2 {
   margin-top: 6%;
@@ -276,41 +606,104 @@ html body main .section4 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #2b3544;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 1000px;
+  background-color: #1f2937;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 html body main .section4 form .form-group {
   display: flex;
   flex-direction: column;
-}
-html body main .section4 form .form-group label {
-  color: #e0e9f8;
-  margin-bottom: 4px;
-}
-html body main .section4 form .form-group input,
-html body main .section4 form .form-group textarea {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #1f2937;
-  color: white;
-  border: none;
-}
-html body main .section4 form .enviar {
-  cursor: pointer;
-  background-color: #6d6dff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  color: #fff;
-  font-size: 16px;
-  transition: 0.5s ease-in-out;
-}
-html body main .section4 form .enviar:hover {
-  background-color: #5353ff;
+  margin-bottom: 20px;
 }
 
+html body main .section4 form .form-group label {
+  color: #e0e9f8;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+html body main .section4 form .form-group input,
+html body main .section4 form .form-group textarea {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #293649;
+  color: #e0e9f8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+html body main .section4 form .form-group input:focus,
+html body main .section4 form .form-group textarea:focus {
+  outline: none;
+  border-color: #4a5d78;
+  background-color: #2f3f57;
+  box-shadow: 0 0 0 2px rgba(74, 93, 120, 0.2);
+}
+
+html body main .section4 form .form-group input::placeholder,
+html body main .section4 form .form-group textarea::placeholder {
+  color: #8b96a5;
+}
+
+html body main .section4 form .enviar {
+  cursor: pointer;
+  background-color: #293649;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+html body main .section4 form .enviar::before {
+  content: "\f1d8";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+html body main .section4 form .enviar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.7s ease;
+  z-index: -1;
+}
+
+html body main .section4 form .enviar:hover::after {
+  left: 100%;
+}
+
+html body main .section4 form .enviar:hover {
+  background-color: #364761;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(41, 54, 73, 0.3);
+}
+
+html body main .section4 form .enviar:active {
+  transform: translateY(0);
+  background-color: #1f2937;
+  box-shadow: 0 2px 4px rgba(41, 54, 73, 0.2);
+}
 @media (max-width: 768px) {
   .titulo {
     align-items: center !important;
@@ -377,6 +770,60 @@ html body main .section4 form .enviar:hover {
   .botones {
     flex-direction: column !important;
     align-items: flex-start !important;
+  }
+}
+@media (max-width: 768px) {
+  html body main .section .content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .img-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .titulo-personal h1 {
+    font-size: 2.5rem;
+  }
+
+  .sobre-mi {
+    text-align: center;
+    width: 100%;
+  }
+
+  .sobre-mi p {
+    font-size: 1rem;
+  }
+
+  .botones {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .titulo-personal h1 {
+    font-size: 2rem;
+  }
+
+  .botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-link {
+    width: 100%;
+  }
+
+  .btn-redes {
+    width: 100%;
+    justify-content: center;
   }
 }
 @keyframes slideIn {
